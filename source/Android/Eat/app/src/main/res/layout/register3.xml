@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/register3_uploadheader"
+        android:background="#fff"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        android:text="上传头像"
+        android:textSize="30dp"
+        android:textColor="#eae8e8"
+        android:id="@+id/register3_upload"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/register3_next"
+        android:gravity="center"
+        android:background="@drawable/shape"
+        android:text="完成"
+        android:textSize="30dp"
+        android:textColor="#eae8e8"/>
+</LinearLayout>

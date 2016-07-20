@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.example.eat.BackMenu
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.example.eat.BackMenu>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/find_name"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:hint="输入姓名"
+            android:layout_weight="2"
+            />
+        <Button
+            android:id="@+id/find_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="查询"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:background="#3cade2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/find_friend_image"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="bottom"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_name"
+            android:text="no  exit"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:text="添加"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:background="#3cade2"/>
+    </LinearLayout>
+
+</LinearLayout>

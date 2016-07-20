@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#111111"
+        android:id="@+id/restphoto"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="饭店名"
+        android:textSize="40dp"
+        android:id="@+id/restname"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="饭店类型"
+                android:textSize="20dp"
+                android:id="@+id/resttype"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="联系方式"
+                android:textSize="20dp"
+                android:id="@+id/restphone"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:text="饭店星级"
+                android:textSize="20dp"
+                android:id="@+id/reststar"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="评论人数"
+                android:textSize="20dp"
+                android:id="@+id/restlun_num"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="地址:"
+        android:textSize="30dp"
+        android:id="@+id/restaddress"/>
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape"
+        android:text="查看评论"
+        android:textColor="#eae9eb"
+        android:textSize="20dp"
+        android:id="@+id/viewluns"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        android:text="查看菜单"
+        android:textColor="#eae9eb"
+        android:textSize="20dp"
+        android:id="@+id/viewdisdes"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        android:text="我要评论"
+        android:textColor="#eae9eb"
+        android:textSize="20dp"
+        android:id="@+id/addcomment"/>
+
+
+
+</LinearLayout>

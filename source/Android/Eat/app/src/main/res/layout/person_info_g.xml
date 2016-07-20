@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:background="#111111"/>-->
+
+    <com.example.eat.BackMenu
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.example.eat.BackMenu>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:textSize="25dp"
+                android:id="@+id/Username"
+                android:gravity="center_vertical"/>
+            <!--<TextView-->
+                <!--android:layout_height="70dp"-->
+                <!--android:layout_width="150dp"-->
+                <!--android:hint="Username"-->
+                <!--android:textSize="25dp"-->
+                <!--android:layout_weight="2"/>-->
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:text="口味"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"/>
+
+            <Spinner
+                android:id="@+id/changefavorite"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                ></Spinner>
+
+
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:text="地址"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"/>
+
+            <Spinner
+                android:id="@+id/changeaddress"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                ></Spinner>
+
+
+        </TableRow>
+
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:text="E-mail"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"/>
+            <EditText
+                android:layout_height="70dp"
+                android:layout_width="150dp"
+                android:hint="PassWord"
+                android:textSize="25dp"
+                android:layout_weight="2"
+                android:id="@+id/changeemail"/>
+
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <TextView
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:text="联系方式"
+                android:textSize="25dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"/>
+            <EditText
+                android:layout_height="70dp"
+                android:layout_width="150dp"
+                android:hint="PassWord"
+                android:textSize="25dp"
+                android:layout_weight="2"
+                android:id="@+id/changephone"/>
+
+        </TableRow>
+
+
+        <!--<TableRow android:gravity="center">-->
+            <!--<CheckBox-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:gravity="right"-->
+                <!--android:id="@+id/ifsure"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:text="同意《安全保密条例》"-->
+                <!--android:textSize="20dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--/>-->
+        <!--</TableRow>-->
+    </TableLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/shape"
+        android:text="完成"
+        android:textSize="30dp"
+        android:textColor="#eae8e8"
+        android:id="@+id/person_info_finish"/>
+</LinearLayout>
