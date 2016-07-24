@@ -1,5 +1,6 @@
 package com.example.eat.friend_list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.eat.R;
 import com.example.eat.URL.UThread;
 import com.example.eat.infomatioin.Person;
 import com.example.eat.infomatioin.User;
+import com.example.eat.personal.MainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -39,26 +42,40 @@ public class FindFriend extends AppCompatActivity {
         fname = (EditText)findViewById(R.id.find_name);
         head = (ImageView)findViewById(R.id.find_friend_image);
         uname = (TextView)findViewById(R.id.friend_name);
+        head.setImageResource(R.drawable.user);
 
         findbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 person = new Person();
-                search();
+                int flag = search();
+                if (flag == 1) {
+                    Toast.makeText(FindFriend.this, "已找到 ", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(FindFriend.this, "未找到 ", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
         addfriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addfriend();
+                int flag = addfriend();
+                if (flag == 1) {
+                    Toast.makeText(FindFriend.this, "添加成功 ", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(FindFriend.this, FriendList.class));
+                }
+                else {
+                    Toast.makeText(FindFriend.this, "请重新尝试", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
 
-    public void search() {
-        String url = "http://10.0.2.2:8001/android/searchUser";
+    public int search() {
+        String url = User.getURL() + "/searchUser";
         String post = "name="+ fname.getText().toString();
         System.out.println(post);
         person.setName(fname.getText().toString());
@@ -77,6 +94,10 @@ public class FindFriend extends AppCompatActivity {
 
         if (person.getId() != -1) {
             uname.setText(person.getName());
+            return 1;
+        }
+        else {
+            return 0;
         }
     }
 
@@ -104,8 +125,8 @@ public class FindFriend extends AppCompatActivity {
         }
     }
 
-    public void addfriend() {
-        String url = "http://10.0.2.2:8001/android/addFriend";
+    public int addfriend() {
+        String url = User.getURL() + "/addFriend";
         String post = "id=" + person.getId() + "&name=" + User.getName();
         System.out.println(post);
 
@@ -117,6 +138,9 @@ public class FindFriend extends AppCompatActivity {
             e.printStackTrace();
         }
         System.out.println(th.getResult());
-
+        if (th.getResult().equals("success")) {
+            return 1;
+        }
+        return 0;
     }
 }

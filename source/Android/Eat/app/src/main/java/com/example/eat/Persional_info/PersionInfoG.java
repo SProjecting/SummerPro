@@ -121,7 +121,7 @@ public class PersionInfoG extends AppCompatActivity {
 
     public void update() {
 
-        String url = "http://10.0.2.2:8001/android/editInfo";//URL地址
+        String url = User.getURL() + "/editInfo";//URL地址
         String post = "name=" + person.getName() + "&password=" + person.getPassword()
                 + "&email=" + eemail + "&phone=" + pphone +
                 "&address=" + citychose + "&prefer=" + typechose +

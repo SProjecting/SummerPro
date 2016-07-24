@@ -5,13 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@drawable/beijing1">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/register3_uploadheader"
-        android:background="#fff"/>
+
 
     <Button
         android:layout_width="250dp"
@@ -20,7 +17,8 @@
         android:text="上传头像"
         android:textSize="30dp"
         android:textColor="#eae8e8"
-        android:id="@+id/register3_upload"/>
+        android:id="@+id/register3_upload"
+        android:layout_marginTop="100dp"/>
 
     <ImageView
         android:layout_width="match_parent"

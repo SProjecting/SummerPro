@@ -23,6 +23,7 @@ import com.example.eat.infomatioin.Memont;
 import com.example.eat.infomatioin.Restaurant;
 import com.example.eat.infomatioin.User;
 import com.example.eat.personal.MainActivity;
+import com.example.eat.resturant.ResturantInfo;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -68,7 +69,7 @@ public class CommentPage_rest extends Activity {
                 int i = Commit();
                 if (i == 1) {
                     Toast.makeText(CommentPage_rest.this, "评论成功", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(CommentPage_rest.this, MainActivity.class));
+                    startActivity(new Intent(CommentPage_rest.this, ResturantInfo.class));
                 }
                 else {
                     Toast.makeText(CommentPage_rest.this, "重新尝试", Toast.LENGTH_LONG).show();
@@ -127,7 +128,7 @@ public class CommentPage_rest extends Activity {
 
     public int Commit() {
 
-        String url = "http://10.0.2.2:8001/android/addComment";
+        String url = User.getURL() + "/addComment";
         String post = "username=" + User.getName() + "&content=" + comment.getContent()
                 + "&restaurant_id=" + rest.getId() + "&star=" + starchose;
 

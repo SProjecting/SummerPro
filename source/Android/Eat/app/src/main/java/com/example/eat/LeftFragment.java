@@ -8,10 +8,12 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.eat.Persional_info.PersionInfo;
 import com.example.eat.friend_list.FriendList;
 import com.example.eat.infomatioin.Person;
+import com.example.eat.infomatioin.User;
 import com.example.eat.personal.MainActivity;
 import com.example.eat.resturant.ResturantList;
 
@@ -23,6 +25,8 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
     private DrawerLayout drawer_layout;
     private Person person;
     // private FragmentManager fManager;
+    private TextView name;
+    private TextView sign;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +36,11 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.btn_three).setOnClickListener(this);
         view.findViewById(R.id.btn_four).setOnClickListener(this);
         view.findViewById(R.id.btn_five).setOnClickListener(this);
+
+        name = (TextView)view.findViewById(R.id.left_name);
+        name.setText(User.getName());
+        sign = (TextView)view.findViewById(R.id.left_info);
+        sign.setText("");
         // fManager = getActivity().getSupportFragmentManager();
 
         //person = new MainActivity().getPerson();

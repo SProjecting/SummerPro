@@ -12,6 +12,7 @@ import com.example.eat.URL.UThread;
 import com.example.eat.infomatioin.Dish;
 import com.example.eat.infomatioin.Person;
 import com.example.eat.infomatioin.Restaurant;
+import com.example.eat.infomatioin.User;
 import com.example.eat.personal.CommentAdapter;
 import com.example.eat.personal.Comment_record;
 
@@ -84,14 +85,14 @@ public class DishList extends Activity {
 
         for (int i = 0; i < rest.getDishnum(); i++) {
             Dish dish = rest.getDish(i);
-            Comment_record cc = new Comment_record(dish.getName(), R.mipmap.ic_launcher, dish.getPrice());
+            Comment_record cc = new Comment_record(dish.getName(), R.drawable.caidan, dish.getPrice());
             dlist.add(cc);
         }
     }
 
 
     public void getDish() {
-        String url="http://10.0.2.2:8001/android/getMenu";
+        String url= User.getURL() + "/getMenu";
         String post="id=" + rest.getId();
 
         UThread th = new UThread(url, post);//新建线程

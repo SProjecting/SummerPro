@@ -27,6 +27,7 @@ public class ResturantInfo extends Activity {
     private Button viewdisdes;
     private Restaurant restaurant;
     private Button addcomment;
+    private TextView lunnum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +43,19 @@ public class ResturantInfo extends Activity {
         viewluns=(Button)findViewById(R.id.viewluns);
         viewdisdes=(Button)findViewById(R.id.viewdisdes);
         addcomment = (Button)findViewById(R.id.addcomment);
+//        lunnum = (TextView)findViewById(R.id.restlun_num);
 //        viewdisdes=(Button)findViewById(R.id.viewdisdes);
 
         Intent Rintent = getIntent();
         restaurant = (Restaurant) Rintent.getSerializableExtra("rest");
 
         resname.setText(restaurant.getName());
-        restype.setText(restaurant.getLabel());
-        resphone.setText(restaurant.getPhone());
-        resstar.setText(restaurant.getStar());
-        resaddress.setText(restaurant.getAddress());
+        restype.setText("店主: " + restaurant.getManagename());
+        resphone.setText("电话: " + restaurant.getPhone());
+        resstar.setText("时间: " + restaurant.getBuss_hour());
+        resaddress.setText("地址:\n\t\t" + restaurant.getAddress());
+//        lunnum.setText("星级: " + restaurant.getStar());
+        resphoto.setImageResource(R.drawable.jiyejia2);
 
         viewdisdes.setOnClickListener(new View.OnClickListener() {
             @Override

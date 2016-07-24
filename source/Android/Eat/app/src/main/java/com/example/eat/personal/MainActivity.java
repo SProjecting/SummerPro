@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         for (int i = 0; i < memonts.size(); i++) {
             Memont mm = memonts.get(i);
-            Comment_record cc = new Comment_record(mm.getName(), R.mipmap.ic_launcher, mm.getContent() + "\n "+ mm.getTime());
+            Comment_record cc = new Comment_record(mm.getName(), R.drawable.user, mm.getContent() + "\n "+ mm.getTime());
             commentList.add(cc);
         }
 
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void GetMemont() {
-        String url = "http://10.0.2.2:8001/android/moment";
+        String url = User.getURL() + "/moment";
         String post = "username=" + User.getName();
 
         UThread th = new UThread(url, post);//新建线程

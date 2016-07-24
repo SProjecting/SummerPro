@@ -1,82 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:background="@drawable/beijing4"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/dishimage"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#111111"
-        android:id="@+id/dishimage"/>
+        android:background="#111111" />
 
     <TextView
+        android:id="@+id/dishname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="菜名"
-        android:textSize="40dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/dishname"/>
+        android:text="菜名"
+        android:textSize="40dp" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableRow>
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:text="口味"
-                android:textSize="20dp"
-                android:id="@+id/dishtype"
-                android:layout_marginLeft="20dp"/>
 
             <TextView
+                android:id="@+id/dishtype"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:text="口味"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/dishstar"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="营养等级"
-                android:textSize="20dp"
-                android:id="@+id/dishstar"/>
+                android:textSize="25dp" />
         </TableRow>
 
         <TableRow>
-            <TextView
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:text="推荐星级"
-                android:textSize="20dp"
-                android:id="@+id/dishjian"
-                android:layout_marginLeft="20dp"/>
 
             <TextView
+                android:id="@+id/dishjian"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:text="推荐星级"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/dishprice"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:text="价格"
-                android:textSize="20dp"
-                android:id="@+id/dishprice"/>
+                android:textSize="25dp" />
         </TableRow>
 
     </TableLayout>
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="原料食材"
-        android:textSize="20dp"
-        android:layout_marginLeft="20dp"/>
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
-        android:text="原料食材"
-        android:textSize="20dp"
-        android:id="@+id/dishsource"
-        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="原料食材"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/dishsource"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="原料食材"
+            android:textSize="20dp" />
+
+    </LinearLayout>
 
 </LinearLayout>

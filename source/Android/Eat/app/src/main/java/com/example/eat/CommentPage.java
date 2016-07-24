@@ -115,7 +115,7 @@ public class CommentPage extends Activity {
 
     public int Commit() {
 
-        String url = "http://10.0.2.2:8001/android/publish";
+        String url = User.getURL() + "/publish";
         String post = "username=" + User.getName() + "&content=" + memont.getContent();
         //person.setName(uname);
         //person.setPassword(pword);

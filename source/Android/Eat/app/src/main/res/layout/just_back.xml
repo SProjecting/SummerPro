@@ -10,10 +10,10 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="后退"
-        android:textColor="#12b6db"
+        android:textColor="#fff"
         android:textSize="25dp"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:background="#fff"/>
+        android:background="#12b6db"/>
 
 </RelativeLayout>

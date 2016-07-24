@@ -13,6 +13,7 @@ import com.example.eat.R;
 import com.example.eat.URL.PostUtils;
 import com.example.eat.URL.UThread;
 import com.example.eat.infomatioin.Person;
+import com.example.eat.infomatioin.User;
 import com.example.eat.personal.MainActivity;
 
 import java.util.HashMap;
@@ -43,7 +44,7 @@ public class Register3 extends AppCompatActivity {
                 System.out.println("这是最后" + person.getName());
 
 
-                String url = "http://10.0.2.2:8001/android/register";//URL地址
+                String url = User.getURL() + "/register";//URL地址
                 String post = "name=" + person.getName() + "&password=" + person.getPassword()
                         + "&email=" + person.getEmail() + "&phone=" + person.getPhonenum() +
                         "&address=" + getPNum(person.getAddress()) + "&prefer=" +person.getPrefer() +

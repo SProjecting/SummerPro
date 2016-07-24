@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public int ifexiting() {
 
-        String url = "http://10.0.2.2:8001/android/login";
+        String url = User.getURL() + "/login";
         String post = "username=" + uname + "&password=" + pword;
         //person.setName(uname);
         //person.setPassword(pword);

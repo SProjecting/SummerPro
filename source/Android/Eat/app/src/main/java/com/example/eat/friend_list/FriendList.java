@@ -146,14 +146,14 @@ public class FriendList extends AppCompatActivity implements View.OnClickListene
             else {
                 address = (String)m1.get(p.getAddress());
             }
-            Comment_record c = new Comment_record(p.getName(), R.mipmap.ic_launcher, p.getPhonenum() + "  " + address );
+            Comment_record c = new Comment_record(p.getName(), R.drawable.user, p.getPhonenum() + "  " + address );
             flist.add(c);
         }
     }
 
 
     public void getfriend() {
-        String url = "http://10.0.2.2:8001/android/getFriendList";
+        String url = User.getURL() + "/getFriendList";
         String post = "name=" + User.getName();
         System.out.println(post);
         UThread th = new UThread(url, post);//新建线程

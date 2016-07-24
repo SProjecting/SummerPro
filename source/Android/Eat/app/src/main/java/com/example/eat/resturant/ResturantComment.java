@@ -70,14 +70,14 @@ public class ResturantComment extends Activity {
 
         for (int i = 0; i < rest.getlunnum(); i++) {
             Comment cc = rest.getComment(i);
-            Comment_record c = new Comment_record(cc.getUsername() + " " + cc.getStar(), R.mipmap.ic_launcher, cc.getContent());
+            Comment_record c = new Comment_record(cc.getUsername() + " " + cc.getStar(), R.drawable.user, cc.getContent());
             flist.add(c);
         }
     }
 
 
     public void GetRest() {
-        String url = "http://10.0.2.2:8001/android/getComment";
+        String url = User.getURL() + "/getComment";
         String post = "id=" + rest.getId();
 
         UThread th = new UThread(url, post);//新建线程

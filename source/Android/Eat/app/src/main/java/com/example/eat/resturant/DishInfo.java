@@ -39,7 +39,7 @@ public class DishInfo extends Activity {
         Intent Rintent = getIntent();
         dish = (Dish)Rintent.getSerializableExtra("dish");
 
-
+        dishImage.setImageResource(R.drawable.pisa2);
         dishName.setText(dish.getName());
         dishType.setText(dish.getFlavour());
         dishStar.setText(dish.getTime());

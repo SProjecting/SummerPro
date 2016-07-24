@@ -138,13 +138,13 @@ public class ResturantList extends AppCompatActivity implements View.OnClickList
 //        flist.add(c11);
         for (int i = 0; i < person.getRestnum(); i++) {
             Restaurant rest = person.getRestaurant(i);
-            Comment_record cc = new Comment_record(rest.getName(), R.mipmap.ic_launcher, rest.getAddress());
+            Comment_record cc = new Comment_record(rest.getName(), R.drawable.shangjia, rest.getAddress());
             flist.add(cc);
         }
     }
 
     public void GetRest() {
-        String url = "http://10.0.2.2:8001/android/nearby";
+        String url = User.getURL() + "/nearby";
         String post = "name=" + User.getName();
 
         UThread th = new UThread(url, post);//新建线程
@@ -154,7 +154,7 @@ public class ResturantList extends AppCompatActivity implements View.OnClickList
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("这是得到的请求  " + th.getResult());
+        System.out.println("这是饭店的所有信息  " + th.getResult());
 
         JSONSolve(th.getResult());
 
@@ -174,9 +174,9 @@ public class ResturantList extends AppCompatActivity implements View.OnClickList
                 rest.setemail(job.optString("email"));
                 rest.setaddress(job.optString("address"));
                 rest.setphone(job.optString("phone"));
-                rest.setBuss_hour(job.optString("buss_hour"));
-                rest.setInstroduction(job.optString("instroduction"));
-                rest.setManagename(job.optString("managename"));
+                rest.setBuss_hour(job.optString("business_hour"));
+                rest.setInstroduction(job.optString("introduction"));
+                rest.setManagename(job.optString("manager_name"));
                 rest.setStar(job.optString("star"));
 
                 person.addRestaurants(rest);
